@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Validation</title>
+        <title>Flight available</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+        <script>
+            function loginValidation()
+            {
+                var uname = document.myform.username.value;
+                var pass = document.myform.password.value;
+                if(uname == null || uname=="" || pass.length==0 )
+                {
+                    alert("Enter the username and password");
+                    return false;
+                }
+                else if(pass.length<6)
+                {
+                    alert("The password is minimum 6 digits ");
+                    return false;
+                }
+                return true;
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="container6">    
+            <p style="font-size: medium;">Karthik AirLines</p>
+             <hr>   
+            <a href="index.html" class="box">Home</a>
+            <a href="About.html" class="box">About Us</a>
+            <a href="services.html" class="box">Services</a>
+            <a href="ourfleet.html" class="box">Our Fleet</a>
+            <a href="contact.html" class="box">Contact Us</a>
+            <a href="registration.html" class="box">Registration</a>
+            <a href="login.html" class="box">Login</a>
+            <input type="text" class="search"><a href="book.html"><input type="button" value="search" ></a>
+        <div class="popular-flightss my-5">
+            <h2>Login</h2>
+        <form name="myform" action="book.html" onsubmit="return loginValidation(this)" >
+            <center>
+            UserName: <input type="text" name="username"><br><br>
+            Password: <input type="password" name="password"><br><br>
+                      <input type="submit" value="Submit">
+            </center>  
+        </form>
+        <br><br>
+        <footer>
+            <div>
+                <p style="color: red;">© 2024 Flight Booking | About | Careers | Privacy Policy | T&C</p>
+            </div>
+        </footer>
+    </body>
+</html>
